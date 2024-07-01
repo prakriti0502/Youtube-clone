@@ -8,7 +8,9 @@ const buttonList = [
 const ButtonList = () => {
   return (
     <div className='flex'>
-        {buttonList.map(button=>(<Button name={button}/>))}
+      {/* we are using index as key here since we want to keep it simple,
+       but in real world apps, never use indexes as keys */}
+        {buttonList.map((button,i)=>(<Button name={button} key={i}/>))}
       {/* <Button/> */}
     </div>
   )
